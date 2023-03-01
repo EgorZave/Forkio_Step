@@ -1,0 +1,314 @@
+.cards {
+   background-image: url("../image/footer/layer_footer.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   &__pricing-title {
+      text-align: center;
+      color: $mainColor;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 42px;
+      margin-bottom: 32px;
+      padding-top: 14px;
+
+   }
+
+   &__pricing-list {
+      @include flexColumn;
+   }
+
+   &__pricing-list-item {
+      @include flexColumn;
+      background-color: #5f5161;
+      margin-bottom: 18px;
+
+      &--agency {
+         @extend .cards__pricing-list-item;
+         background-color: $cardActive;
+         width: 300px;
+      }
+   }
+
+   &__pricing-name {
+      width: 100%;
+      text-align: center;
+      color: $mainColor;
+      background-color: rgba(255, 255, 255, .11);
+      text-transform: uppercase;
+      padding-top: 36px;
+      padding-bottom: 36px;
+      font-size: 24px;
+      line-height: 24px;
+
+      &--agency {
+
+         background-color: $cardActiveBack;
+
+      }
+   }
+
+   &__pricing-cost {
+
+      color: $mainColor;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 62px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+
+      &--agency {
+         @extend .cards__pricing-cost;
+         font-size: 82px;
+         line-height: 84px;
+         margin-top: 14px;
+         margin-bottom: 16px;
+      }
+
+      &::before {
+         content: '$';
+         font-weight: 400;
+         margin-right: -15px;
+      }
+   }
+
+   &__pricing-per-month {
+
+      color: $mainColor;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+
+      &::after {
+         content: "";
+         display: block;
+         width: 60px;
+         height: 5px;
+         background-color: $secondColor;
+         margin-bottom: 30px;
+         margin-top: 38px;
+         margin-left: 99px;
+         margin-right: 99px;
+      }
+
+   }
+
+   .cards__pricing-per-month--agency::after {
+      margin-top: 46px;
+      margin-bottom: 40px;
+   }
+
+   &__plan-benefits {
+      color: $mainColor;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 37px;
+      text-align: center;
+
+      &--students {
+         @extend .cards__plan-benefits;
+
+      }
+
+      &--prof {
+         @extend .cards__plan-benefits;
+         line-height: 28px;
+      }
+
+      &--agency {
+         @extend .cards__plan-benefits;
+         line-height: 32px;
+      }
+
+      &--enterprice {
+         @extend .cards__plan-benefits;
+         line-height: 28px;
+         margin-bottom: 39px;
+      }
+   }
+
+
+
+   &__purchase {
+      color: $mainColor;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 15px 38px;
+      background-color: rgba(255, 255, 255, .11);
+      border-radius: 40px;
+      margin-bottom: 67px;
+
+      &--prof {
+         @extend .cards__purchase;
+         margin-bottom: 36px;
+      }
+
+      &--agency {
+         @extend .cards__purchase;
+         margin-bottom: 47px;
+         font-size: 16px;
+         line-height: 18px;
+      }
+
+      &--enterprice {
+         @extend .cards__purchase;
+         margin-bottom: 39px;
+      }
+   }
+}
+
+
+@media (min-width:481px) {
+   .cards__pricing-title {
+      margin-bottom: 39px;
+      padding-top: 88px;
+      font-size: 42px;
+      line-height: 44px;
+   }
+
+   .cards {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         row-gap: 30px;
+         margin: 0 auto;
+         max-width: 480px;
+         padding-bottom: 94px;
+      }
+
+      &__pricing-list-item {
+         max-width: 200px;
+         margin-bottom: 0px;
+
+         &--agency {
+            min-width: 220px;
+            margin-left: -20px;
+
+
+         }
+      }
+
+      &__plan-benefits {
+         &--students {
+            margin-bottom: 68px;
+         }
+
+         &--agency {
+            margin-bottom: 83px;
+         }
+
+         &--prof {
+            margin-bottom: 30px;
+         }
+
+         &--enterprice {
+            margin-bottom: 30px;
+         }
+
+      }
+
+      &__purchase {
+         margin-bottom: 36px;
+      }
+
+
+
+   }
+}
+
+@media (min-width:550px) {
+
+
+   .cards__pricing-list {
+      max-width: 520px;
+   }
+
+   .cards__pricing-list-item {
+      min-width: 225px;
+   }
+
+   .cards__pricing-list-item--agency {
+      min-width: 250px;
+      margin-left: -20px;
+   }
+}
+
+@media (min-width:700px) {
+   .cards__pricing-list {
+      max-width: 680px;
+   }
+
+   .cards__pricing-list-item {
+      min-width: 255px;
+   }
+
+   .cards__pricing-list-item--agency {
+      min-width: 280px;
+   }
+}
+
+@media (min-width:768px) {
+
+
+   .cards__pricing-list-item--agency {
+      min-width: 300px;
+      margin-left: -40px;
+   }
+}
+
+@media (min-width:993px) {
+   .cards__pricing-title {
+      margin-bottom: 61px;
+      padding-top: 114px;
+      font-size: 48px;
+      line-height: 50px;
+
+   }
+
+   .cards {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         max-width: 100%;
+         gap: 15px;
+         padding-bottom: 80px;
+
+      }
+
+      &__pricing-list-item {
+         max-width: 220px;
+
+         &--agency {
+            min-width: 255px;
+            margin-left: 0;
+
+         }
+      }
+
+   }
+}
+
+@media (min-width:1200px) {
+   .cards {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         width: 1200px;
+      }
+
+      &__pricing-list-item {
+         min-width: 258px;
+
+         &--agency {
+            min-width: 300px;
+
+         }
+      }
+
+   }
+}
