@@ -4,3 +4,10 @@ Egor Zavertalyuk
 
 
 https://egorzave.github.io/Forkio_Step/
+
+
+Used:
+Gulp
+Html
+Scss
+Js
